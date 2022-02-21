@@ -1,0 +1,11 @@
+// Некомпилируемые стили
+@import './utils/**/*.scss';
+
+// нормалайз и базовая стилизация
+@import './core/*.scss';
+
+// App styles
+@import './project/*.scss';
+
+// Дополнительная стилизация подключенных либ
+@import './libraries/*.scss'
