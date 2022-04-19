@@ -9,7 +9,7 @@ module.exports = function browsersync() {
 
   bs.init({
     server: {
-      baseDir: 'dist/',
+      baseDir: 'build/',
       host: '192.168.0.104',
     },
     ui: false, // ОТКЛЮЧАЕТ UI BROWSERSYNC
@@ -31,5 +31,5 @@ module.exports = function browsersync() {
   watch(['./src/js/**/*.js', './src/js/main.js'], parallel('dev_js'));
   watch('./src/fonts/**/*.ttf', series('ttf', 'ttf2', 'fonts'));
 
-  watch('./dist/**/*.*').on('change', bs.reload);
+  watch('./build/**/*.*').on('change', bs.reload);
 }

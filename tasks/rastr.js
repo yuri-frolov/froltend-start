@@ -12,7 +12,7 @@ const plumber = require('gulp-plumber');
 module.exports = function rastr() {
 	return src('src/assets/img/**/*.+(png|jpg|jpeg|gif|svg|ico)')
 		.pipe(plumber())
-		.pipe(changed('dist/img'))
+		.pipe(changed('build/img'))
 		.pipe(imagemin({
 				interlaced: true,
 				progressive: true,
@@ -34,6 +34,6 @@ module.exports = function rastr() {
 				imagemin.optipng(),
 				imagemin.svgo()
 			], ), )
-		.pipe(dest('dist/img'))
+		.pipe(dest('build/img'))
 		.pipe(bs.stream())
 }

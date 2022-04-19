@@ -16,5 +16,5 @@ module.exports = function dev_js() {
         filename: 'webpack.bundle.js',
       },
     }))
-    .pipe(dest('./dist/js/'))
+    .pipe(dest('./build/js/'))
 }

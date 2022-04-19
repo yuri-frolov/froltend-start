@@ -11,7 +11,7 @@ module.exports = function html() {
   gulp.src(['src/views/*.njk', '!src/**/_*.njk']),
   nunjucks.compile(),
   htmlmin({ collapseWhitespace: true }),
-  gulp.dest('dist')
+  gulp.dest('build')
   ).on('error', notify.onError({
     title: 'Нунчаки похерились',
     message: 'Error: <%= error.message %>'
@@ -25,7 +25,7 @@ module.exports = function html() {
 //  gulp.src(['src/**/*.njk', '!src/**/_*.njk']),
 //  nunjucks.compile(),
 //  htmlmin({ collapseWhitespace: true }),
-//  gulp.dest('dist')
+//  gulp.dest('build')
 //  ).on('error', function(err) {
 //    console.log(c.bgRed.bold(" Нунчаки похерились "));
 //    console.log(err.message);

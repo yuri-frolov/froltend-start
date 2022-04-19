@@ -17,7 +17,7 @@ module.exports = async function libs_css(done) {
 			}).on('error', sass.logError))
 			.pipe(concat('libs.min.css'))
 			.pipe(maps.write())
-			.pipe(dest('./dist/css/'))
+			.pipe(dest('./build/css/'))
 	} else {
 		return done(console.log(c.blueBright('No added CSS/SCSS plugins')));
 	}

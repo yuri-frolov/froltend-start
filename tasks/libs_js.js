@@ -21,7 +21,7 @@ module.exports = async function libs_js(done) {
       .pipe(uglify())
       .pipe(concat('libs.min.js'))
       .pipe(map.write())
-      .pipe(dest('dist/js/'))
+      .pipe(dest('build/js/'))
   else {
     return done(console.log(c.yellowBright('No added JS plugins')));
   }

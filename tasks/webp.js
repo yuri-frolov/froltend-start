@@ -7,11 +7,11 @@ const multiDest = require('gulp-multi-dest');
 const plumber = require('gulp-plumber');
 
 module.exports = function webp() {
-	return src('dist/img/**/*.+(png|jpg|jpeg)')
+	return src('build/img/**/*.+(png|jpg|jpeg)')
 		.pipe(plumber())
-		.pipe(changed('dist/img', {
+		.pipe(changed('build/img', {
 			extension: '.webp'
 		}))
 		.pipe(webpConv())
-		.pipe(multiDest(['src/assets/img', 'dist/img']))
+		.pipe(multiDest(['src/assets/img', 'build/img']))
   }

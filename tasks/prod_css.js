@@ -19,5 +19,5 @@ module.exports = function build_css() {
 				'Safari >= 6',
 			],
 		}))
-    .pipe(gulp.dest('./dist/css'));
+    .pipe(gulp.dest('./build/css'));
 }
